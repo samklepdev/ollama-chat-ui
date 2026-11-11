@@ -1,0 +1,72 @@
+.sidebar {
+  width: 260px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--foreground);
+  padding: 12px;
+  gap: 12px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.newChat {
+  padding: 8px 12px;
+  border: 1px solid var(--foreground);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--foreground);
+  cursor: pointer;
+  text-align: left;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item,
+.itemActive {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
+
+.itemActive {
+  background: rgba(127, 127, 127, 0.2);
+}
+
+.title,
+.titleInput {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.model {
+  font-size: 11px;
+  opacity: 0.6;
+}
+
+.deleteButton {
+  background: transparent;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+}
