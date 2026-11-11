@@ -1,0 +1,33 @@
+.window {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+.userBubble {
+  align-self: flex-end;
+  max-width: 70%;
+  background: rgba(100, 150, 255, 0.15);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.assistantBubble {
+  align-self: flex-start;
+  max-width: 70%;
+  background: rgba(127, 127, 127, 0.12);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
+
+.errorBubble {
+  align-self: flex-start;
+  max-width: 70%;
+  background: rgba(255, 80, 80, 0.15);
+  border: 1px solid rgba(255, 80, 80, 0.4);
+  border-radius: 10px;
+  padding: 8px 12px;
+}
