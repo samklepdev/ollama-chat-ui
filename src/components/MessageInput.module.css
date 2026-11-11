@@ -1,0 +1,32 @@
+.inputBar {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid var(--foreground);
+}
+
+.textarea {
+  flex: 1;
+  resize: none;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid var(--foreground);
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.sendButton {
+  padding: 0 16px;
+  border-radius: 6px;
+  border: 1px solid var(--foreground);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.sendButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
