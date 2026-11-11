@@ -2,8 +2,11 @@
 
 import ReactMarkdown from "react-markdown";
 import rehypeHighlight from "rehype-highlight";
+import rehypeKatex from "rehype-katex";
 import remarkGfm from "remark-gfm";
+import remarkMath from "remark-math";
 import "highlight.js/styles/github-dark.css";
+import "katex/dist/katex.min.css";
 import type { Message } from "@/lib/types";
 import styles from "./ChatWindow.module.css";
 
@@ -22,7 +25,10 @@ export function ChatWindow({ messages, isStreaming, error }: ChatWindowProps) {
           className={message.role === "user" ? styles.userBubble : styles.assistantBubble}
         >
           {message.role === "assistant" ? (
-            <ReactMarkdown remarkPlugins={[remarkGfm]} rehypePlugins={[rehypeHighlight]}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm, remarkMath]}
+              rehypePlugins={[rehypeHighlight, rehypeKatex]}
+            >
               {message.content || (isStreaming ? "…" : "")}
             </ReactMarkdown>
           ) : (
